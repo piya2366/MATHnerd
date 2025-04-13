@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathNerd – Solve + Understand with GPT</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 MathNerd</h1>
+            <p class="subtitle">Solve math problems and get AI-powered explanations</p>
+        </header>
+        
+        <div class="app-container">
+            <!-- Math Solver Panel -->
+            <div class="panel">
+                <h2>Math Solver</h2>
+                <div class="input-group">
+                    <label for="math-expression">Enter Math Expression:</label>
+                    <input type="text" id="math-expression" placeholder="e.g., 2*(3+4), sqrt(16), or matrix([1,2],[3,4])">
+                </div>
+                
+                <div class="input-group">
+                    <label for="math-precision">Precision (decimal places):</label>
+                    <select id="math-precision">
+                        <option value="2">2</option>
+                        <option value="4" selected>4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                
+                <button id="solve-btn">Solve Math Problem</button>
+                
+                <div class="examples">
+                    <h3>Try these examples:</h3>
+                    <div class="example">2*(3+4)</div>
+                    <div class="example">sqrt(16) + log(100)</div>
+                    <div class="example">sin(pi/4)</div>
+                    <div class="example">matrix([1,2],[3,4]) * [5,6]</div>
+                    <div class="example">derivative(x^2 + 3x + 4, x)</div>
+                </div>
+                
+                <div class="result-container">
+                    <div class="result-title">Math Solution:</div>
+                    <div id="math-result">Enter an expression to see the result</div>
+                </div>
+                
+                <div id="math-error" class="error"></div>
+            </div>
+            
+            <!-- AI Explanation Panel -->
+            <div class="panel">
+                <h2>AI Explanation</h2>
+                
+                <div class="input-group">
+                    <label for="explanation-level">Explanation Level:</label>
+                    <select id="explanation-level">
+                        <option value="simple">Simple</option>
+                        <option value="detailed" selected>Detailed</option>
+                        <option value="technical">Technical</option>
+                    </select>
+                </div>
+                
+                <button id="explain-btn">Get Explanation</button>
+                
+                <div class="loading" id="explanation-loading">
+                    <div class="spinner"></div>
+                    <p>Generating explanation...</p>
+                </div>
+                
+                <div class="result-container">
+                    <div class="result-title">Concept Explanation:</div>
+                    <div id="explanation">The explanation will appear here after you solve a math problem and click "Get Explanation".</div>
+                </div>
+                
+                <div id="explanation-error" class="error"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
